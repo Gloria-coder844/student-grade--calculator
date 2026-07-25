@@ -15,8 +15,7 @@ A simple web application that calculates student grades based on marks entered f
 - CSS
 - JavaScript
 
-## Author
-Gloria Ndanu
+
 ## How to Run
 
 1. Download or clone the repository
