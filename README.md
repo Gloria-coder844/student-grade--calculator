@@ -24,10 +24,13 @@ A simple web application that calculates student grades based on marks entered f
 ## Project Structure
 
 student-grade-calculator/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
+
+- [index.html](./index.html)
+- [style.css](./style.css)
+- [script.js](./script.js)
+- [README.md](./README.md)
+
+
 
 ## Future Improvements
 
