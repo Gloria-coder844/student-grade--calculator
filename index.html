@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <span class="theme-icon" id="themeIcon">&#9728;</span>
+        </button>
+
+        <h1>Student Grade Calculator</h1>
+
+        <form id="gradeForm" novalidate>
+            <div class="form-group">
+                <label for="studentName">Student Name</label>
+                <input
+                    type="text"
+                    id="studentName"
+                    name="studentName"
+                    placeholder="Enter student name"
+                    autocomplete="off"
+                >
+                <span class="error-message" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="mark1">Subject 1 Marks</label>
+                <input
+                    type="number"
+                    id="mark1"
+                    name="mark1"
+                    placeholder="0 - 100"
+                    min="0"
+                    max="100"
+                    step="any"
+                >
+                <span class="error-message" id="mark1Error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="mark2">Subject 2 Marks</label>
+                <input
+                    type="number"
+                    id="mark2"
+                    name="mark2"
+                    placeholder="0 - 100"
+                    min="0"
+                    max="100"
+                    step="any"
+                >
+                <span class="error-message" id="mark2Error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="mark3">Subject 3 Marks</label>
+                <input
+                    type="number"
+                    id="mark3"
+                    name="mark3"
+                    placeholder="0 - 100"
+                    min="0"
+                    max="100"
+                    step="any"
+                >
+                <span class="error-message" id="mark3Error"></span>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">Calculate</button>
+                <button type="button" class="btn btn-secondary" id="resetBtn">Reset</button>
+            </div>
+        </form>
+
+        <div class="results" id="results">
+            <h2>Results</h2>
+            <div class="result-row">
+                <span class="result-label">Name:</span>
+                <span class="result-value" id="resultName">-</span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Total:</span>
+                <span class="result-value" id="resultTotal">-</span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Average:</span>
+                <span class="result-value" id="resultAverage">-</span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Percentage:</span>
+                <span class="result-value" id="resultPercentage">-</span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Status:</span>
+                <span class="result-value status-badge" id="resultStatus">-</span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Grade:</span>
+                <span class="result-value grade-badge" id="resultGrade">-</span>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-download" id="downloadBtn">
+            Download Result as PDF
+        </button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
